@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c93d7cfc40.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script async src="cart.js"></script>
+    <title>Contatos | Infusões Natura</title>
+</head>
+
+
+<body>
+    <header>
+        <div class="menu-content">
+            <h1 class="logo">Infusões Natura</h1>
+            <nav class="header-menu">
+                <ul class="list-itens">
+                    <li><a href="index.html">PÁGINA INICIAL</a></li>
+                    <li><a href="loja.html">LOJA</a></li>
+                    <li><a href="contatos.html">CONTATOS</a></li>
+                    <li><a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <div class="cart-icon-container" id="open-cart">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </div>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main class="page-main contatos-main">
+        <div class="page-content wide-content">
+            <h1 class="page-title">Contatos</h1>
+            <p class="contatos-subtitle">Estamos aqui para ajudar. Envie-nos uma mensagem ou visite-nos pessoalmente.</p>
+
+
+            <div class="contatos-grid">
+
+
+                <!-- Informações de Contacto -->
+                <div class="info-contacto">
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <h4>Morada</h4>
+                            <p>Rua da Infusões Natura, 3291<br>Curitiba, Brasil</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>+55(41)*****-****</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contato@infusoesnatura.com.br</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                        <div>
+                            <h4>Horário de Funcionamento</h4>
+                            <p>Segunda a Sexta: 05:00h - 21:30<br>Sábado: 10:00h - 20:00<br>Domingo: Fechado loja física, somente Delivery.</p>
+                        </div>
+                    </div>
+
+
+                    <div class="social-links">
+                    <a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a>    
+                    </div>
+                </div>
+
+
+                <!-- Formulário de Contato -->
+                <form class="form-contacto" method="get" action="">
+                    <div class="form-group">
+                        <label for="c-nome">Nome:</i></label>
+                        <input type="text" id="c-nome" name="nome" placeholder="O seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-email">Email:</i></label>
+                        <input type="email" id="c-email" name="email" placeholder="email@exemplo.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-assunto"></i></label>
+                        <input type="text" id="c-assunto" name="assunto" placeholder="Como podemos ajudar?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-mensagem">Mensagem:</i></label>
+                        <textarea id="c-mensagem" name="mensagem" placeholder="Escreva a sua mensagem..." required></textarea>
+                    </div>
+                    <button type="submit" class="form-bnt">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h2>Meu Carrinho</h2>
+            <i class="fa-solid fa-xmark close-cart" id="close-cart"></i>
+        </div>
+        <div class="cart-items" id="cart-items">
+        </div>
+        <div class="cart-total">
+            <div class="total-row">
+                <span>Total:</span>
+                <span id="cart-total-price">R$ 0,00</span>
+            </div>
+            <button class="bnt-checkout" onclick="alert('Compra finalizada!')">Finalizar Compra</button>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <p class="footer-logo">Infusões Natura</p>
+            <p class="footer-tagline">Adquira, beba e relaxe!<br>Venha fazer parte da nossa comunidade.</p>
+          </div>
+    
+          <div class="footer-col">
+            <h4>Links Rápidos</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">PÁGINA INICIAL</a></li>
+              <li><a href="loja.html">LOJA</a></li>
+              <li><a href="contatos.html">CONTATOS</a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-col">
+            <h4>Siga-nos</h4>
+            <ul class="footer-links social-list">
+              <li><a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+              <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+            </ul>
+          </div>
+    
+          <div class="footer-address">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Rua Matheus Leme, 3291<br>São Lourenço, Curitiba – PR<br>CEP 82200-000</span>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>Copyright &copy; 2026 Infusões Natura - Todos os direitos reservados.</p>
+        </div>
+      </footer>
+
+
+
+    <script async src="cart.js"></script>
+
+
+</body>
+</html>
