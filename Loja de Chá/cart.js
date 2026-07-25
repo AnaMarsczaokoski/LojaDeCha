@@ -9,7 +9,6 @@ const cartTotalValue = document.getElementById('cart-total-price');
 
 let cart = JSON.parse(localStorage.getItem('infusoesCart')) || [];
 
-// Abrir e fechar carrinho
 if (openCartBtn) {
     openCartBtn.addEventListener('click', () => {
         if (cartModal) cartModal.classList.add('active');
@@ -28,7 +27,6 @@ if (continueShoppingBtn) {
     });
 }
 
-// Adicionar produto ao carrinho (sem abrir a barra lateral automaticamente)
 function addToCart(id, name, price, image = 'images/imagem.jpg') {
     const existing = cart.find(item => item.id === id);
 
@@ -41,7 +39,6 @@ function addToCart(id, name, price, image = 'images/imagem.jpg') {
     updateCart();
 }
 
-// Diminuir quantidade (ou remover do carrinho)
 function removeFromCart(id) {
     const existing = cart.find(item => item.id === id);
 
@@ -56,23 +53,19 @@ function removeFromCart(id) {
     updateCart();
 }
 
-// Remover item completamente (Ícone de fechar/excluir no carrinho)
 function removeAllFromCart(id) {
     cart = cart.filter(item => item.id !== id);
     updateCart();
 }
 
-// Atualizar interface do carrinho e estado dos botões nos cards
 function updateCart() {
     localStorage.setItem('infusoesCart', JSON.stringify(cart));
 
     const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
 
-    // Atualiza contadores no header e no modal
     if (cartCount) cartCount.innerText = totalItems;
     if (cartCountHeader) cartCountHeader.innerText = `(${totalItems} ${totalItems === 1 ? 'item' : 'itens'})`;
 
-    // Renderizar lista de itens do carrinho
     if (cartItemsContainer) {
         cartItemsContainer.innerHTML = '';
 
@@ -106,11 +99,9 @@ function updateCart() {
         }
     }
 
-    // Atualiza os botões "-" nos cards dos produtos na loja
     updateProductButtons();
 }
 
-// Ativa/Desativa o botão "-" nos cards da loja
 function updateProductButtons() {
     const productCards = document.querySelectorAll('.product-card');
 
@@ -121,7 +112,6 @@ function updateProductButtons() {
         if (minusBtn) {
             const inCart = cart.find(item => item.id === id);
             
-            // Só adiciona a classe 'active' se o produto estiver no carrinho com quantidade > 0
             if (inCart && inCart.quantity > 0) {
                 minusBtn.classList.add('active');
             } else {
@@ -131,7 +121,6 @@ function updateProductButtons() {
     });
 }
 
-// Execução segura ao carregar o script
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', updateCart);
 } else {
