@@ -1,97 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://kit.fontawesome.com/c93d7cfc40.js" crossorigin="anonymous" defer></script>
-  <link rel="stylesheet" href="style1.css" />
-  <script defer src="loja.js"></script>
-  <script defer src="cart.js"></script>
-  <title>Loja | Infusões Natura</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/c93d7cfc40.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Infusões Natura - Loja</title>
 </head>
+
 <body>
-  <header>
-    <div class="menu-content">
-      <h1 class="logo">Infusões Natura</h1>
-      <nav class="header-menu">
-        <ul class="list-itens" id="nav-list">
-          <li><a href="index.html">PÁGINA INICIAL</a></li>
-          <li><a href="loja.html">LOJA</a></li>
-          <li><a href="contatos.html">CONTATOS</a></li>
-          <li><a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
-          <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-          <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-          <li class="cart-icon-container" id="open-cart">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span class="cart-count" id="cart-count">0</span>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <div class="menu-content">
+            <h1 class="logo">Infusões Natura</h1>
+            <nav class="header-menu">
+                <ul class="list-itens">
+                    <li><a href="index.html">PÁGINA INICIAL</a></li>
+                    <li><a href="loja.html">LOJA</a></li>
+                    <li><a href="contatos.html">CONTATOS</a></li>
+                    <li><a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li class="cart-icon-container" id="open-cart">
+                        <i class="fa-solid fa-shopping-cart"></i>
+                        <span class="cart-count" id="cart-count">0</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <main class="page-main loja-main">
-    <div class="page-content wide-content">
-      <p class="page-title">Loja Online</p>
-      <p class="page-subtitle">Explore nossa seleção de infusões naturais e encontre o sabor perfeito para você.</p>
-      <div class="products-grid" id="products-grid"></div>
-    </div>
-  </main>
+    <main class="page-main loja-main">
+        <div class="page-content wide-content">
+            <h1 class="page-title">Nossos Produtos</h1>
+            <p class="page-subtitle">Escolha suas ervas e infusões favoritas</p>
 
-  <div class="cart-modal" id="cart-modal">
-    <div class="cart-header">
-      <h2>Meu Carrinho</h2>
-      <button class="close-cart" id="close-cart" aria-label="Fechar carrinho"></button>
-    </div>
-    <div class="cart-items" id="cart-items"></div>
-    <div class="cart-total">
-      <div class="total-row">
-        <span>Total:</span>
-        <span id="cart-total-price">R$ 0,00</span>
-      </div>
-      <button class="btn-checkout" id="checkout-btn">Finalizar Compra</button>
-    </div>
-  </div>
+            <div class="products-grid" id="products-grid"></div>
+        </div>
+    </main>
 
-  <footer>
-    <div class="footer-grid">
-      <div class="footer-col">
-        <p class="footer-logo">Infusões Natura</p>
-        <p class="footer-tagline">Adquira, beba e relaxe!<br>Venha fazer parte da nossa comunidade.</p>
-      </div>
+    <aside class="cart-sidebar cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h2>Meu Carrinho <span id="cart-count-header">(0 itens)</span></h2>
+            <i class="fa-solid fa-xmark close-cart close-cart-btn" id="close-cart"></i>
+        </div>
 
-      <div class="footer-col">
-        <h4>Links Rápidos</h4>
-        <ul class="footer-links">
-          <li><a href="index.html">PÁGINA INICIAL</a></li>
-          <li><a href="loja.html">LOJA</a></li>
-          <li><a href="contatos.html">CONTATOS</a></li>
-        </ul>
-      </div>
+        <div class="cart-items cart-items-list" id="cart-items">
+        </div>
 
-      <div class="footer-col">
-        <h4>Siga-nos</h4>
-        <ul class="footer-links social-list">
-          <li><a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
-          <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-          <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
-        </ul>
-      </div>
+        <div class="cart-footer cart-total">
+            <div class="cart-total-row total-row">
+                <span class="cart-total-label">Total:</span>
+                <span class="cart-total-price" id="cart-total-price">R$ 0,00</span>
+            </div>
 
-      <div class="footer-address">
-        <i class="fa-solid fa-location-dot"></i>
-        <span>Rua Matheus Leme, 3291<br>São Lourenço, Curitiba – PR<br>CEP 82200-000</span>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>Copyright &copy; 2026 Infusões Natura - Todos os direitos reservados.</p>
-    </div>
-  </footer>
+            <div class="cart-footer-btns">
+                <button class="btn-continuar" id="btn-continue-shopping">Continuar Comprando</button>
+                <button class="checkout-btn btn-finalizar" onclick="alert('Compra finalizada!')">Finalizar Compra</button>
+            </div>
+        </div>
+    </aside>
 
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <p class="footer-logo">Infusões Natura</p>
+                <p class="footer-tagline">Adquira, beba e relaxe!<br>Venha fazer parte da nossa comunidade.</p>
+            </div>
 
+            <div class="footer-col">
+                <h4>Links Rápidos</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">PÁGINA INICIAL</a></li>
+                    <li><a href="loja.html">LOJA</a></li>
+                    <li><a href="contatos.html">CONTATOS</a></li>
+                </ul>
+            </div>
 
-  <script async src="cart.js"></script>
+            <div class="footer-col">
+                <h4>Siga-nos</h4>
+                <ul class="footer-links social-list">
+                    <li><a href="https://web.whatsapp.com/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook"></i></a></li>
+                </ul>
+            </div>
 
-  
+            <div class="footer-address">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Rua Matheus Leme, 3291<br>São Lourenço, Curitiba – PR<br>CEP 82200-000</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright &copy; 2026 Infusões Natura - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+    <script src="loja.js"></script>
 </body>
+
 </html>
