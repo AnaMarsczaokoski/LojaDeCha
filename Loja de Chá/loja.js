@@ -124,7 +124,7 @@ const products = [
         price: 94.99,
         image: "images/img18.png",
         category: "Jarras 1,5l"
-    },
+    }
 ];
 
 const productsGrid = document.getElementById("products-grid");
@@ -136,14 +136,23 @@ function renderProducts() {
 
     products.forEach(product => {
         const productHTML = `
-            <div class="product-card">
-                <img src="${product.image}" alt="${product.name}" class="product-image">
-                <p style="color: #aaa; font-size:1.2rem; margin: 5px 0;">${product.category}</p>
-                <h3 class="product-name">${product.name}</h3>
-                <p class="product-price">R$ ${product.price.toFixed(2).replace('.', ',')}</p>
-                <button class="add-to-cart-btn" data-id="${product.id}">
-                    Adicionar ao Carrinho
-                </button>
+            <div class="product-card" data-id="${product.id}">
+                <div class="product-img-box">
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                </div>
+                <div class="product-info-box">
+                    <div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <p class="product-category">${product.category}</p>
+                    </div>
+                    <div class="product-bottom-row">
+                        <span class="product-price">R$ ${product.price.toFixed(2).replace('.', ',')}</span>
+                        <div class="product-actions">
+                            <button class="remove-from-cart-btn" onclick="removeFromCart(${product.id})">-</button>
+                            <button class="add-to-cart-btn" onclick="addToCart(${product.id}, '${product.name.replace(/'/g, "\\'")}', ${product.price}, '${product.image}')">+</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         `;
         productsGrid.innerHTML += productHTML;
