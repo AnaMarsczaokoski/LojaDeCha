@@ -907,7 +907,7 @@ footer {
     gap: 0.8rem;
 }
 
-/* Botão adicionar ao carrinho */
+/* Botão */
 .add-to-cart-btn {
     width: 32px;
     height: 32px;
@@ -933,7 +933,6 @@ footer {
 }
 
 
-/* Botão remover do carrinho */
 .remove-from-cart-btn,
 .btn-minus {
     width: 32px;
@@ -998,7 +997,7 @@ footer {
     right: 0 !important;
 }
 
-/* Cabeçalho do Carrinho com Contador */
+/* Cabeçalho carrinho */
 .cart-sidebar .cart-header,
 .carrinho-header,
 .cart-header {
@@ -1062,7 +1061,6 @@ footer {
     padding-right: 0.5rem;
 }
 
-/* Card estilo a Imagem de Referência */
 .cart-sidebar .cart-item,
 .item-carrinho,
 .cart-item {
@@ -1119,7 +1117,6 @@ footer {
     margin-top: 0.2rem;
 }
 
-/* Controles de Quantidade (+ / -) dentro do Carrinho */
 .cart-item-qty,
 .item-qtd-control {
     display: flex;
@@ -1150,7 +1147,6 @@ footer {
     font-size: 1.3rem;
 }
 
-/* Ícone de Excluir (X no topo do card) */
 .cart-sidebar .remove-item-btn,
 .btn-remove-item {
     position: absolute;
@@ -1265,7 +1261,6 @@ footer {
 }
 
 
-/* Container de ícones e redes no cabeçalho */
 .header-actions,
 .social-links-header {
     display: flex;
